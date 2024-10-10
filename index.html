@@ -9,6 +9,124 @@
   <hr>
   <h2 style="font-family:calibri;"><b>Conference paper: Hello</b></h2>
   <hr>
+  <!style for tables>
+    <style>
+      table {
+        font-family: arial, sans-serif; 
+        border-collapse: collapse; 
+        width: 30%;
+      }
+
+      <!-- td element is used to define a data cell within a table
+      th element is used to define a header cell within a table, padding 
+      defines a space between the text and the border -->
+      
+      td, th {
+        border: 1px solid #dddddd
+        text-align: left;
+        padding: 8px;
+      }
+
+      <!-- tr element is used to define a row within a table -->
+      
+      tr:nth-child(even) {
+        background-colour: #dddddd
+      }
+      
+    </style>
+
+  <style>
+
+<!-- in html p.exi refers to a specific paragrpah element that has a class
+    attribute of ex1, when we use p.ex1 in CSS, we are selecting all paragraph 
+    elements with class ex1 and applying style to them, using classes in this way
+    allows you to apply consistent styling to specific elements without affecting
+    other elements on the page -->
+    
+p.ex1 {
+  margin-left: 250px;
+}
+</style>
   </head>
+
+  <!-- This next line adjusts the width of the content 
+  to match the device's width and sets the initial scale to 1 -->
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- this line uses external css to link the style to this webpage, this line links
+  an external stylesheet from the w3schools website-->
+  
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+  <!-- Setting the css property display to none, which means any element with the class
+  myslides will be hidden and not displayed on the page-->
+  
+  <style>
+    .mySlides {displace:none;}
+  </style>
+
+  <!-- to set the background colour of the body to white and add a left margin of 50 pixels, use -->
+
+  <body style="background-color:#FFFFFF;margin-left:50px;">  
+  
+  <!-- create a subheading the id attribute set to abstract, the id attribute serves as a unique identifier,
+    which can be used an anchor link to navigate to this specific section -->
+    
+  <hr>
+    <h3 id="Abstract">Abstract</h3>.  
+  <hr>
+
+  <!-- opening a paragraph with a class ex1, which utilised the style defined previously in line 46, this allows you 
+    to present display your enclosed text with a preformatted style, preserving line breaks and spacing using the pre tag
+    to the next line. for this example of the abstract, you can use this as your content -->
+    
+  <p class="ex1">
+  <pre>
+    This paper presents a novel adaptive acting learning strategy. The most accurate classificaiton model from a heterogeneous classifier pool
+    is selected at each learning epoch. Our goal is to achieve greater inceremental improvement in accuracy, compared to using a single type of classification
+    model throughout the process. the strategy is evaluated on benchmark data sets. we further consider an application to texture classificaiton problems in sonar mosaic imagery and
+    compare it with non-adaptive active learning and traditional machine learning approaches. our results show that we conclude that.
+  </pre>
+  </p>
+
+  <!-- following the same steps to insert the introduction paragraph and link it with correct id -->
+
+  <hr>
+    <h3 id="Introduction">Introduction</h3>
+  <hr>
+
+  <p class="ex1">
+  <pre>
+    Active Learning (Angluin, 1988, Cohn et al., 1994) is a paradigm where a concept is learnt by an intelligent machine through the interaction of an oracle with the machine system, over a sequence of learning epochs. A distinctive component in an active system is the querying strategy, used to sample candidate training instances from a pool and evaluate them for informativeness, i.e., their potential to improve the classification model. Various strategies have been proposed including; Query by Committee (Seung et al., 1992), Monte Carlo estimation (Roy and McCallum, 2001), uncertainty sampling (Lewis and Gale, 1994) and version space reduction (margin sampling) (Tong and Koller, 2001). Irrespective of how the most informative pattern instances are chosen at each epoch they are presented for labeling, to a machine (database) or human oracle that has knowledge of the class labels. After adding the newly labeled instances to the current training set, a revised model is subsequently induced. A goal of this process is to achieve an efficient, incremental advancement of learning at each epoch. The process is continued until some stopping criterion has been met, such as reaching a stage where information from the selected instances is contrary to the model, causing the classifier confidence to drop, as in Vlachos (2008)
+  </pre>
+  </p>
+
+  <hr>
+    <h3 id="Analysis and discussion">Analysis and discussion</h3>
+  <hr>
+
+  <!-- mathml, is an externsible markup language based to represent mathematical notations and structures in a way that is both
+    human readable and machine readble, it is used primarily for displaying mathematical content on webpages and in documents,
+    making math accessible and searcable on the internet -->
+
+
+  <!-- table of contents with anchor links to different sections of the document -->
+  <table>
+     
+  <tr>
+    <th><h3>Table of contents</h3></th>
+  </tr> 
+  <tr>
+    <td><a href="#Abstract">Abstract</td>
+  </tr>
+  <tr>
+    <td><a href="#Analysis and discussion">Analysis and discussion</td>
+  </tr>
+
+  <tr>
+    <td><a href="#References">References</td>
+  </tr>
+  </table>
   
 </html>
