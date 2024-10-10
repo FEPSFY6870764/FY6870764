@@ -111,8 +111,16 @@ p.ex1 {
     making math accessible and searcable on the internet -->
 
 
-  <!-- table of contents with anchor links to different sections of the document -->
+  <!-- table of contents with anchor links to different sections of the document,
+    table tag serves as the opening of the html table, tr tag functions as the opening tag of the html table
+    delineating the creation of a new row within the table, th tag generates a table header cell, td tag
+    creates a table data cell that contains an anchor "a" link, the href attribute is set to abstract which
+    means clicking this link will navigate to an element with the id attribute set to abstract. the link ext is 
+    abstract-->
+
+
   <table>
+    
      
   <tr>
     <th><h3>Table of contents</h3></th>
@@ -128,5 +136,52 @@ p.ex1 {
     <td><a href="#References">References</td>
   </tr>
   </table>
+
+  <!-- html code also can be used to display tabular data on a web page, and you can further style and format it using css to enhance its appearance,
+    table tag defines the start of a table, tr tag represents a table row, th tag represents a table header cell, which are typically displayed
+    in bold and centred, td tag represents a standard table data cell, each td element contains the actual data for each column -->
+  Table 1: Data on cost and lifespan of bridge repairs
+
+  <table>
+  <tr>
+    <th>£ Cost of repairs</th>
+    <th>Lifespan of repairs (years)</th>
+  </tr>
+  <tr>
+    <td>0.7 m</td>
+    <td>2</td>
+  </tr>
+  <tr>
+    <td>3.3m</td>
+    <td>5</td>
+  </tr>
+  <tr>
+    <td>17.4m</td>
+    <td>7</td>
+  </tr>
+  <tr>
+    <td>8.8m</td>
+    <td>9</td>
+  </tr>
+  </table>
+
+  <!-- external source for research using a hyperlink, the href attribute linking to an external url is the visible link that the user sees 
+    and can click on -->
+  ‘<a href=”https://www.icevirtuallibrary.com/doi/full/10.1680/jbren.21.00034”>Toshihiko et al (2023).</a>
+    
+  <!-- display a list of references in a web page. it is common to use h3 for section headings and pre for
+    preformatted text when displaying references or code snippets ot enure that the text formatting is intended -->
+
+  <h3 id="References">References</h3>
+
+    <p>
+    <pre>
+      Reference 1
+
+      Reference 2
+
+      Reference 3
+    </pre>
+    </p>
   
 </html>
