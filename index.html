@@ -141,7 +141,7 @@
       </tr>
 
       <tr>
-        <td><a href="Finding Solutions">Finding Solutions</td>
+        <td><a href="#Finding Solutions">Finding Solutions</td>
       </tr>
 
       <tr>
@@ -160,6 +160,44 @@
     <p class="ex1">
 The effect of global warming is mostly from the overuse of burning fossil fuels to provide the world’s energy needs. To lessen the effects of climate change, renewable energy sources such as solar power need to be built. While solar panels do generally seem environmentally friendly at first glance during their operation, this is not always the case when we look at the full cycle of its production. Mining the raw materials needed can induce some problems. The manufacturing process is energy intensive and toxic. A large amount of land is needed, which may impact wildlife and there are issues with the disposal and recycling of solar  panels. However, many of these issues can be reduced through careful thinking and proper preparations.
     </p>
+
+     <!-- //////////////////////////////////////////////////////////////////////////////// -->
+  <!-- ////////////////////////////// Word count function ////////////////////////////// -->
+  <!-- //////////////////////////////////////////////////////////////////////////////// -->
+<!-- Placeholder for total word count -->
+<p id="totalWordCount"></p>
+<hr>
+<script>
+  // Function to calculate and display word count for a specified section
+  function displayWordCount(sectionId, outputId) {
+    // Get the text content from the specified section
+    const text = document.getElementById(sectionId).textContent;
+    // Split text into words based on spaces and filter out any empty strings
+    const wordArray = text.trim().split(/\s+/);
+    // Count the words
+    const wordCount = wordArray.length;
+    // Return the word count for summing purposes
+    return wordCount;
+  }
+  // Function to calculate and display total word count from selected sections
+  function displayTotalWordCount() {
+    // Calculate word count for each section and accumulate the total
+    const IntroductionCount = displayWordCount("Introduction");
+    const MiningMaterialsCount = displayWordCount("Mining Materials");
+    const ToxicManufacturingCount = displayWordCount("Toxic Manufacturing Process")
+    const TakingUpLandCount = displayWordCount("Taking Up Land")
+    const EndOfLifeCount = displayWordCount("End-Of-Life Challenges")
+    const FindingSolutionsCount = displayWordCount("Finding Solutions")
+    const ConclusionCount = displayWordCount("Conclusion")
+      
+    // Calculate the sum of all selected sections
+    const totalWordCount = IntroductionCount + MiningMaterialsCount + ToxicManufacturingCount + TakingUpLandCount + EndOfLifeCount + FindingSolutionsCount + ConclusionCount;
+    // Display the total word count
+    document.getElementById("totalWordCount").innerText = `Total word count: ${totalWordCount}`;
+  }
+  // Run the function for specific sections and display total count when the page loads
+  window.onload = displayTotalWordCount;
+</script>
     
     <h3 id="Introduction">Introduction</h3>
     <p class="ex1">
@@ -185,7 +223,7 @@ as silicon tetrachloride, which can be recycled to create more polysilicon, howe
 Solar farms, which are a large collection of photovoltaic (PV) solar panels used to produce electricity on a large scale, require a lot of land. Estimates for utility-scale PV system range from 3.5 to 10 acres per megawatt (UCSUSA, 2013). This can destroy the natural habitats of species, for example in the Mojave Desert of California, tutorises have to dig burrows for their shelter which other species also use (Rahman et al., 2022). Solar farms can also cause a phenomenon known as the photovoltaic heat island effect, which occurs when solar panels reflect heat. Findings demonstrated that temperatures around a solar power plant were 3-4°C warmer than nearby wildlands (Binder, 2016). This alters the natural habitat and when animals are displaced from their natural homes, they are often unable to adapt to the surrounding ecosystem, decreasing biodiversity.
     </p>
 
-    <h3 id="E">End-of-Life Challenges</h3>
+    <h3 id="End-Of-Life Challenges">End-of-Life Challenges</h3>
     <p class="ex1">
 Solar panels generally last for 25 to 30 years (Walker et al., 2024). So, as solar panels increase in popularity, there is also an increase in the problem with the disposal of panels that are past their lifetime. The International Renewable Energy Agency (IRENA) estimates that 8 million tons of PV panels will reach their end of life and be decommissioned by 2030, growing to 50 million tonnes by 2050 (Briggs, 2024). All these unused solar panels will most likely end up in landfills, where they will take up most of the space and release toxic substances, like lead and cadmium, which can leak into the soil and water harming the environment and human health (Nussey, 2021). There is clearly a lack of appropriate recycling systems for solar panels, mainly because of the reason that recycling is expensive because advanced equipment and technology are needed.
     </p>
